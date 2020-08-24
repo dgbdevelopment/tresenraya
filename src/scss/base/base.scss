@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(
+    90deg,
+    $bg-light 0%,
+    $bg-color 20%,
+    $bg-color 80%,
+    $bg-light 100%
+  );
+  color: $text-color;
+  min-height: 100vh;
+  font-family: $main-font, "sans-serif";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}

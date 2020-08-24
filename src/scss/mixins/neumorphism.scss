@@ -1,0 +1,47 @@
+@mixin neu-text(
+  $pixels,
+  $first-color: rgba(0, 0, 0, 0.45),
+  $second-color: rgba(255, 255, 255, 0.9)
+) {
+  font-weight: 800;
+  text-shadow: $pixels $pixels $pixels + 2 $first-color,
+    $pixels * (-1) $pixels * (-1) $pixels * 2 $second-color;
+}
+
+@mixin neu-border(
+  $pixels,
+  $border: none,
+  $first-color: rgba(0, 0, 0, 0.5),
+  $second-color: rgba(255, 255, 255, 0.5)
+) {
+  border: $border solid $bg-light;
+  box-shadow: $pixels $pixels $pixels + 2 $first-color,
+    $pixels * -1 $pixels * -1 $pixels + 2 $second-color;
+  @if $border != none {
+    box-shadow: $pixels $pixels $pixels + 2 $first-color,
+      $pixels * -1 $pixels * -1 $pixels + 2 $second-color,
+      inset $pixels $pixels $pixels + 2 $first-color,
+      inset $pixels * -1 $pixels * -1 $pixels + 2 $second-color;
+  }
+}
+
+@mixin neu-inset-border(
+  $pixels,
+  $first-color: rgba(0, 0, 0, 0.5),
+  $second-color: rgba(255, 255, 255, 0.5)
+) {
+  box-shadow: inset $pixels $pixels $pixels + 2 $first-color,
+    inset $pixels * -1 $pixels * -1 $pixels + 2 $second-color;
+}
+
+@mixin neu-input(
+  $pixels,
+  $first-color: rgba(0, 0, 0, 0.2),
+  $second-color: rgba(255, 255, 255, 0.9)
+) {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 25px;
+  @include neu-inset-border($pixels, $first-color, $second-color);
+}

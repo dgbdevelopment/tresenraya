@@ -1,0 +1,50 @@
+
+.introduction
+  h1.title Tres en raya
+  p.description Juega a tres en raya online, también conocido como tic tac toe o el juego del gato.
+  p.description Practica con la dificultad normal y cuando estés preparado, enfréntate al modo imposible. Aunque la palabra ya lo dice: "imposible".
+#tictactoe.tictactoe
+  .tictactoe__table
+    .table__grid
+      #square1.table__square
+      #square2.table__square
+      #square3.table__square
+      #square4.table__square
+      #square5.table__square
+      #square6.table__square
+      #square7.table__square
+      #square8.table__square
+      #square9.table__square
+  .tictactoe__info
+    p#info__message
+  .tictactoe__options
+    .radio-container__tiles
+      .radio__text Elige las fichas que quieres usar
+      .radio__group
+        label(for="playerO").radio__label
+          input(id="playerO" type="radio" name="chooseTile" checked).radio__input
+          .radio__icon
+            img(src="assets/img/circulo.svg")
+      .radio__group
+        label(for="playerX").radio__label
+          input(id="playerX" type="radio" name="chooseTile").radio__input
+          .radio__icon
+            img(src="assets/img/cruz.svg")     
+    .radio-container__difficulty
+      .radio__text Elige dificultad
+      .radio__group
+        label(for="standard").radio__label
+          input(id="standard" type="radio" name="chooseDifficulty" checked).radio__input
+          .radio__icon
+            span Normal
+      .radio__group
+        label(for="hard").radio__label
+          input(id="hard" type="radio" name="chooseDifficulty").radio__input
+          .radio__icon
+            span Imposible    
+        
+  button#tictactoe__btn.tictactoe__btn Empezar
+.footer
+  a(href="http://dgbdevelopment.com")
+    img(src="assets/img/Logo2-Negro-con-borde.svg", alt="Logo DGB Development")
+    span DGB Development
